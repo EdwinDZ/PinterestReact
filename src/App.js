@@ -1,14 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import NavBarTop from './components/navBarTop/index'
+
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
+
+
+import AppRouter from './config/router'
+import theme from './config/theme'
 
 function App() {
   return(
-      <NavBarTop>
-
-      </NavBarTop>
+    <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <AppRouter></AppRouter>
+  </ThemeProvider>
   )
 }
+
+const GlobalStyle = createGlobalStyle`
+* {
+    @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+    font-family: Roboto, sans-serif;
+  }
+`
 
 export default App;
