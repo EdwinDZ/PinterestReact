@@ -20,17 +20,17 @@ const NavBarBotHomeComponent = () => {
 };
 
 const Footer = styled.footer`
-  position: relative;
+  position: fixed;
   bottom : 0;
   width: calc(100vw-12px);
-  margin: 6px;
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border-bottom : 1px solid black;
   height: 50px;
   opacity: 0.4;
+  width: 100%;
+  box-shadow: 10px 10px 10px 5px #888888
 `
 
 const PinterestIcon = styled(FaPinterest)`

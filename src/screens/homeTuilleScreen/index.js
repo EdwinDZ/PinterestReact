@@ -1,7 +1,14 @@
 import React from 'react'
 
+import Tuile from '../../components/common/Tuile'
+
 const HomeScreen = () => {
-  return <div>HomeScreen</div>
+  return (
+    <Tuile>
+      
+    </Tuile>
+    
+  )
 }
 
 export default HomeScreen
