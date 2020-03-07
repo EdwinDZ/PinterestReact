@@ -52,7 +52,7 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: 10px 10px 10px 5px #888888
+  box-shadow: 10px 10px 10px 5px #888888;
   height: 50px;
 `
 

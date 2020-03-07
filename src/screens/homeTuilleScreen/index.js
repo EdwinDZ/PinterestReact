@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
+import Axios from 'axios'
+import styled from 'styled-components'
 
 import Tuile from '../../components/common/Tuile'
 
-const HomeScreen = () => {
+const HomeScreen = props => {
+ 
   return (
-    <Tuile>
+    <Fragment>
+    <Masonry>
+    <Tuile/>
+    </Masonry>
+    </Fragment>
       
-    </Tuile>
+    
     
   )
 }
+const Masonry = styled.div`
+flex-flow: column wrap;
+display: flex;
+width: 100%;
+`
 
 export default HomeScreen

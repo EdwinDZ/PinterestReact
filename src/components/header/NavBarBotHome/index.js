@@ -30,7 +30,6 @@ const Footer = styled.footer`
   height: 50px;
   opacity: 0.4;
   width: 100%;
-  box-shadow: 10px 10px 10px 5px #888888
 `
 
 const PinterestIcon = styled(FaPinterest)`
