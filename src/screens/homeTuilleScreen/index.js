@@ -8,19 +8,23 @@ const HomeScreen = props => {
  
   return (
     <Fragment>
-    <Masonry>
+    <MasonryWrapper>
     <Tuile/>
-    </Masonry>
+    </MasonryWrapper>
     </Fragment>
       
     
     
   )
 }
-const Masonry = styled.div`
-flex-flow: column wrap;
-display: flex;
-width: 100%;
+const MasonryWrapper = styled.div`
+display:grid;
+grid-template-columns: repeat(2, minmax(100px,1fr));
+padding: 1.0em;
+max-width: 750px;
+margin-right: auto;
+margin-left: auto;
+grid-gap: 15px;
 `
 
 export default HomeScreen

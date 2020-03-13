@@ -1,13 +1,16 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import { useLocation } from 'react-router-dom';
 import Modal from '../../common/Modal'
+import PropTypes from 'prop-types'
 
 import styled from 'styled-components'
 import { FaSearch } from 'react-icons/fa'
 import { TiPlus } from 'react-icons/ti'
 import { AiOutlineMessage } from 'react-icons/ai'
+import { IoIosArrowBack } from 'react-icons/io'
 
-const NavBarTopHomeComponent = () => {
+const NavBarTopImageView = props => {
+  const { onClose } = props
   const location = useLocation()
   const defaultStates = {
     plus: false
@@ -25,7 +28,7 @@ const NavBarTopHomeComponent = () => {
   return (
     <Fragment>
       <Header>
-        <CustomSearchInput placeholder="Rechercher"/>
+        <IoIosArrowBack onClick={onClose} />
         <PlusIcon onClick={() => setPlusState(!plusState)} />
         <MessageIcon />
       </Header>
@@ -33,24 +36,29 @@ const NavBarTopHomeComponent = () => {
         display={plusState}
         onClose={() => setPlusState(!plusState)}
         width={`80%`}
-        title={`Ajouter une épingle ou un tableau`}
+        title={``}
       >
-        Tableau
+        Ouvrir dans l'application
         <br/>
         <br/>
-        Epingle
+        Télécharger l'image
         <br/>
         <br/>
-        Site web
-        <br/>
-        <br/>
-        Photo
+        Report pin
         <br/>
         <br/>
       </Modal>
   </Fragment>
   );
 };
+
+NavBarTopImageView.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
+  onClose: PropTypes.func.isRequired
+}
 
 const Header = styled.header`
   width: calc(100vw-12px);
@@ -59,7 +67,6 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: 10px 10px 10px 5px #888888;
   height: 50px;
 `
 
@@ -93,4 +100,4 @@ const MessageIcon = styled(AiOutlineMessage)`
   opacity: 0.4;
 `
 
-export default NavBarTopHomeComponent;
+export default NavBarTopImageView;

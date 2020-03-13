@@ -52,6 +52,7 @@ const ModalContainer = styled.div`
   border-top-left-radius: 15px;
   border-top-right-radius :15px;
   padding: 24px;
+  width: 90vw;
 `
 const ModalTitle = styled.div`
   display: flex;

@@ -28,7 +28,7 @@ const Footer = styled.footer`
   align-items: center;
   justify-content: space-evenly;
   height: 50px;
-  opacity: 0.4;
+  opacity: 0.9;
   width: 100%;
 `
 
@@ -36,22 +36,26 @@ const PinterestIcon = styled(FaPinterest)`
   position: relative;
   font-size: 2em;
   font-weight: 700;
+  fill:grey;
 `
 const SubscribeIcon = styled(MdSupervisorAccount)`
   position: relative;
   font-size: 2em;
   font-weight: 700;
+  fill:grey;
 `
 const NotificationIcon = styled(IoIosNotifications)`
   position: relative;
   font-size: 2em;
   font-weight: 700;
+  fill:grey;
 `
 
 const CircleIcon = styled(FaRegCircle)`
   position: relative;
   font-size: 2em;
   font-weight: 700;
+  fill:grey;
 `
 
 export default NavBarBotHomeComponent;
